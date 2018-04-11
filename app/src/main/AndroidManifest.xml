@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.log9materials.reimbursement">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SignUpActivity"
+            android:label="Sign Up"/>
+        <activity android:name=".SupervisorProfile"
+            android:label="Welcome"/>
+        <activity android:name=".EmployeeProfile"
+            android:label="Welcome"/>
+        <activity android:name=".ActAsAdmin"
+            android:label="Administrative Privileges"/>
+        <activity android:name=".addNewEmployee"
+            android:label="Add Employee"/>
+        <activity android:name=".updateEmployeeProfile"
+            android:label="Update Profile"/>
+        <activity android:name=".viewPendingReimbursement"
+            android:label="Pending Reimbursements"/>
+        <activity android:name=".ApplyForRegular"
+            android:label="Regular Reimbursement"/>
+        <activity android:name=".viewPaidReimbursement"
+            android:label="Paid Reimbursements"/>
+        <activity android:name=".ApplyForIntercity"
+            android:label="TA/DA - Intercity"/>
+        <activity android:name=".ApplyForLocal"
+            android:label="TA/DA - Local"/>
+        <activity android:name=".ApplyForAccomodation"
+            android:label="TA/DA - Accommodation"/>
+        <activity android:name=".ApplyForDailyAllowance"
+            android:label="TA/DA - Daily Allowance"/>
+        <activity android:name=".ApplyForTaDa"
+            android:label="TA/DA Instructions"/>
+        <activity android:name=".FinalSubmitTaDa"
+            android:label="TA/DA - Final Submit"/>
+        <activity android:name=".EditIntercityTADA"
+            android:label="TA/DA - Edit Intercity"/>
+        <activity android:name=".EditLocalTADA"
+            android:label="TA/DA - Edit Local"/>
+        <activity android:name=".EditAccomodationTADA"
+            android:label="TA/DA - Edit Accommodation"/>
+        <activity android:name=".viewIndividualPaidReimbursement"
+            android:label="Your Paid Reimbursements"/>
+        <activity android:name=".viewIndividualPendingReimbursement"
+            android:label="Your Pending Reimbursements"/>
+        <activity android:name=".ViewReimburseDetail"
+            android:label="Reimbursement Details"/>
+        <activity android:name=".ViewTaDaDetails"
+            android:label="TA/DA Details"/>
+        <activity android:name=".ViewFullTaDaDetails"
+            android:label="Complete TA/DA Details"/>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity android:name=".ResetPasswordActivity"
+            android:label="Reset Password"/>
+        <activity android:name=".MainActivity"
+            android:label="Log In"></activity>
+    </application>
+
+</manifest>

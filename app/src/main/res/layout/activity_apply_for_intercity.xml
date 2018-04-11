@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/journeyReimbursementIdTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:text="Reimbursement ID :"
+        android:textColor="#039BE5"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/journeyFromCityEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/journeyReimbursementIdTextView"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Boarding City"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/journeyToCityEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/journeyFromCityEditText"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Destination City"
+        android:textColor="#000" />
+
+    <Button
+        android:id="@+id/btn_date"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_alignLeft="@+id/journeyReimbursementIdTextView"
+        android:layout_alignStart="@+id/journeyReimbursementIdTextView"
+        android:layout_below="@+id/journeyToCityEditText"
+        android:layout_marginLeft="51dp"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/mybutton"
+        android:fadingEdge="horizontal|vertical"
+        android:onClick="journeyChooseDate"
+        android:text=" Journey Date"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/journeyDatePickedEditText"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btn_date"
+        android:layout_alignBottom="@+id/btn_date"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="47dp"
+        android:layout_marginRight="47dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Date Picked"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/journeyAmountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/journeyToCityEditText"
+        android:layout_alignStart="@+id/journeyToCityEditText"
+        android:layout_below="@+id/journeyDatePickedEditText"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Amount"
+        android:digits="0123456789."
+        android:inputType="numberDecimal"
+        android:textColor="#000" />
+
+    <EditText
+        android:id="@+id/journeyModeEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/journeyAmountEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Mode"
+        android:textColor="#000" />
+
+    <TextView
+        android:id="@+id/uploadTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/journeyModeEditText"
+        android:layout_alignStart="@+id/journeyModeEditText"
+        android:layout_below="@+id/journeyModeEditText"
+        android:layout_marginLeft="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="Upload Ticket"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/uploadTextView"
+        android:layout_marginLeft="18dp"
+        android:layout_marginStart="18dp"
+        android:layout_toEndOf="@+id/uploadTextView"
+        android:layout_toRightOf="@+id/uploadTextView"
+        android:onClick="journeyTicketUpload"
+        android:src="@drawable/upload" />
+
+    <Button
+        android:id="@+id/btn_submit_tada"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/uploadTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/mybutton"
+        android:onClick="journeySubmit"
+        android:text="SUBMIT your ta/Da" />
+
+    <LinearLayout
+        android:id="@+id/linear_layout_of_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_submit_tada"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:layout_height="100dp"
+            android:onClick="journeyIntercity"
+            android:textSize="10sp"
+            android:text="Apply for another intercity"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_margin="5dp"
+            android:onClick="journeyLocal"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:text="Apply for local travel"
+            android:layout_height="100dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textSize="10sp"
+            android:text="Apply for Accommodation"
+            android:onClick="journeyAccomadation"
+            android:layout_margin="5dp"
+            android:layout_height="100dp" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:text="Apply for DA"
+            android:onClick="journeyDailyAllowance"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center"
+        android:text="*Pressing back button will delete all your progress" />
+
+</RelativeLayout>
